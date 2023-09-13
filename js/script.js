@@ -1,5 +1,5 @@
 const itemsCarousel = document.querySelector('.items-carousel');
-const btnUP = document.querySelector('.up');
+const btnUp = document.querySelector('.up');
 const btnDown = document.querySelector('.down');
 
 let counter = 0;
@@ -30,5 +30,19 @@ newItem[0].classList.remove('hide')
 
 btnDown.addEventListener('click',function(){
   console.log('down');
-  
+  newItem[counter].classList.add('hide');
+
+  counter++;
+
+  newItem[counter].classList.remove('hide');
+})
+
+// bottone in su
+btnUp.addEventListener('click',function(){
+  console.log('down');
+  newItem[counter].classList.add('hide');
+
+  counter--;
+
+  newItem[counter].classList.remove('hide');
 })
