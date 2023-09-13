@@ -21,7 +21,7 @@ const images = [
 for(let i = 0; i < images.length;i++){
   const image = images[i];
   itemsCarousel.innerHTML += `<img src="${image}" class= "newItem hide">`;
-  thumbnails.innerHTML += `<img src="${image}"class= "thumbItem">`;
+  thumbnails.innerHTML += `<img src="${image}"class= "thumbItem inactive">`;
 
 }
 
