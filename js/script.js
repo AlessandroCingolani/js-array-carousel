@@ -24,4 +24,11 @@ for(let i = 0; i < images.length;i++){
 
 const newItem = document.getElementsByClassName('newItem');
 
-console.log(newItem);
+
+// prendi indice 0 del nuovo array
+newItem[0].classList.remove('hide')
+
+btnDown.addEventListener('click',function(){
+  console.log('down');
+  
+})
