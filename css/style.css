@@ -23,10 +23,12 @@
 
 .slider {
   position: relative;
+  /* display: flex; */
   height: 100%;
 }
 
 .items-carousel {
+  /* width: 80%; */
   height: 100%;
 }
 
@@ -35,6 +37,20 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* .thumbnails {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+} */
+
+/* .thumbnails img {
+  width: 100%;
+  height: calc(100% / 5);
+  object-fit: cover;
+  filter:contrast(.5);
+} */
 
 .btn-carousel {
   position: absolute;
