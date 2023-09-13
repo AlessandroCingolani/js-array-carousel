@@ -6,7 +6,7 @@ let counter = 0;
 
 // svuoto elementi nell html
 itemsCarousel.innerHTML = '';
-
+btnUp.classList.add('hide')
 
 const images = [
   'img/01.webp',
@@ -28,21 +28,28 @@ const newItem = document.getElementsByClassName('newItem');
 // prendi indice 0 del nuovo array
 newItem[0].classList.remove('hide')
 
+// bottone down
 btnDown.addEventListener('click',function(){
-  console.log('down');
   newItem[counter].classList.add('hide');
 
   counter++;
 
   newItem[counter].classList.remove('hide');
+
+  btnUp.classList.remove('hide')
+  
 })
 
-// bottone in su
+// bottone  su
 btnUp.addEventListener('click',function(){
-  console.log('down');
   newItem[counter].classList.add('hide');
 
   counter--;
 
   newItem[counter].classList.remove('hide');
+
+  if(counter === 0){
+    btnUp.classList.add('hide')
+  }
 })
+
