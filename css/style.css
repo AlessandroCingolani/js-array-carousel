@@ -67,10 +67,10 @@
   height: 25px;
   line-height: 25px;
   text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 8%;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 999;
 }
 
 .btn-carousel:hover {
