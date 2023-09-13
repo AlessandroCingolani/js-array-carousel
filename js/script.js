@@ -17,7 +17,6 @@ const images = [
 
 for(let i = 0; i < images.length;i++){
   const image = images[i];
-  console.log(image);
   itemsCarousel.innerHTML += `<img src="${image}" class= "newItem hide">`;
 }
 
@@ -37,7 +36,8 @@ btnDown.addEventListener('click',function(){
   
     newItem[counter].classList.remove('hide');
   
-    btnUp.classList.remove('hide')
+    btnUp.classList.remove('hide');
+
   }else if(counter < newItem.length){
     newItem[counter].classList.add('hide');
     counter = 0;
