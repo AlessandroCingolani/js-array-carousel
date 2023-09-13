@@ -6,7 +6,6 @@ let counter = 0;
 
 // svuoto elementi nell html
 itemsCarousel.innerHTML = '';
-btnUp.classList.add('hide')
 
 const images = [
   'img/01.webp',
@@ -30,32 +29,38 @@ newItem[0].classList.remove('hide')
 
 // bottone down
 btnDown.addEventListener('click',function(){
-  newItem[counter].classList.add('hide');
+  if (counter < newItem.length -1){
 
-  counter++;
-
-  newItem[counter].classList.remove('hide');
-
-  btnUp.classList.remove('hide')
-
-  if(counter === newItem.length -1){
-    btnDown.classList.add('hide')
+    newItem[counter].classList.add('hide');
+  
+    counter++;
+  
+    newItem[counter].classList.remove('hide');
+  
+    btnUp.classList.remove('hide')
+  }else if(counter < newItem.length){
+    newItem[counter].classList.add('hide');
+    counter = 0;
+    newItem[counter].classList.remove('hide');
   }
   
 })
 
 // bottone  su
 btnUp.addEventListener('click',function(){
-  newItem[counter].classList.add('hide');
+  if(counter > 0){
+    newItem[counter].classList.add('hide');
+  
+    counter--;
+  
+    newItem[counter].classList.remove('hide');
+  
+    btnDown.classList.remove('hide');
 
-  counter--;
-
-  newItem[counter].classList.remove('hide');
-
-  btnDown.classList.remove('hide')
-
-  if(counter === 0){
-    btnUp.classList.add('hide')
+  }else if(counter === 0){
+    newItem[counter].classList.add('hide');
+    counter = newItem.length -1;
+    newItem[counter].classList.remove('hide');
   }
 })
 
