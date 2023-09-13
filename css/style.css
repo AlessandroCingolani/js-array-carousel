@@ -23,12 +23,12 @@
 
 .slider {
   position: relative;
-  /* display: flex; */
+  display: flex;
   height: 100%;
 }
 
 .items-carousel {
-  /* width: 80%; */
+  width: 80%;
   height: 100%;
 }
 
@@ -38,24 +38,23 @@
   object-fit: cover;
 }
 
-/* .thumbnails {
+.thumbnails {
   display: flex;
   flex-direction: column;
   width: 20%;
   height: 100%;
-} */
+}
 
-/* .thumbnails img {
+.thumbnails img {
   width: 100%;
   height: calc(100% / 5);
   object-fit: cover;
-  filter:contrast(.5);
-} */
+}
 
-/* .active {
-  filter: contrast(1);
-  border: 3px solid gray;
-} */
+.active {
+  filter:brightness(2) ;
+  border: 3px solid green;
+}
 
 .btn-carousel {
   position: absolute;
