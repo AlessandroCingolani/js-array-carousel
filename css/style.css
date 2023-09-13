@@ -56,7 +56,7 @@
 }
 
 .active {
-  filter:brightness(2) ;
+  filter:brightness(1.5) ;
   border: 3px solid green;
 }
 
