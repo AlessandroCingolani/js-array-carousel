@@ -36,47 +36,28 @@ thumbItem[0].classList.add('active');
 
 // bottone down
 btnDown.addEventListener('click',function(){
-  if (counter < newItem.length -1){
+  
 
-    newItem[counter].classList.add('hide');
-    thumbItem[counter].classList.remove('active');
+  newItem[counter].classList.add('hide');
+  thumbItem[counter].classList.remove('active');
   
-    counter++;
-  
-    newItem[counter].classList.remove('hide');
-    thumbItem[counter].classList.add('active');
-  
-    btnUp.classList.remove('hide');
-
-  }else if(counter < newItem.length){
-    newItem[counter].classList.add('hide');
-    thumbItem[counter].classList.remove('active');
-    counter = 0;
-    newItem[counter].classList.remove('hide');
-    thumbItem[counter].classList.add('active');
-  }
-  
+  counter++;
+  if (counter === newItem.length) counter = 0;
+  newItem[counter].classList.remove('hide');
+  thumbItem[counter].classList.add('active');
 })
 
 // bottone  su
 btnUp.addEventListener('click',function(){
-  if(counter > 0){
-    newItem[counter].classList.add('hide');
-    thumbItem[counter].classList.remove('active');
+    
+  newItem[counter].classList.add('hide');
+  thumbItem[counter].classList.remove('active');
 
-    counter--;
+  counter--;
+  if(counter < 0) counter = newItem.length -1;
+  newItem[counter].classList.remove('hide');
   
-    newItem[counter].classList.remove('hide');
-  
-    btnDown.classList.remove('hide');
-    thumbItem[counter].classList.add('active');
-
-  }else if(counter === 0){
-    newItem[counter].classList.add('hide');
-    thumbItem[counter].classList.remove('active');
-    counter = newItem.length -1;
-    newItem[counter].classList.remove('hide');
-    thumbItem[counter].classList.add('active');
-  }
+  btnDown.classList.remove('hide');
+  thumbItem[counter].classList.add('active');
 })
 
